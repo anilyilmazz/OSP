@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "";
+}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+
+        body {
+            background-image: url("/images/background.jpg");
+        }
+    </style>
+    <div style="width:30%;margin-left:5%;margin-top:15%" ;>
+        <form method="post" action="/restorant/uyeol">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Restorant Adı</label>
+                <input type="text" class="form-control" name="ad" aria-describedby="emailHelp" placeholder="Restorant Adını Giriniz.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">E-Mail Adresi</label>
+                <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="E-Mail Giriniz.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Parola</label>
+                <input type="password" class="form-control" name="password" placeholder="Parola">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Parola Kontrol</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Parola">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">İş Yeri Adresi</label>
+                <input type="text" class="form-control" name="adress" placeholder="Adres">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Restorant Türü</label>
+                <input type="text" class="form-control" name="tur" placeholder="Tür">
+            </div>
+            <button class="btn btn-primary" style="width:30%;margin-left:12%;">Üye Ol !</button>
+            <a href="/" class="btn btn-success" style="width:30%;margin-left:15%;">Ana Sayfa</a>
+
+        </form>
+    </div>
+</body>

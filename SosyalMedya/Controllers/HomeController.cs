@@ -14,33 +14,23 @@ namespace SosyalMedya.Controllers
     {
         public IActionResult Index()
         {
-            HttpContext.Session.SetString("Test", "Ben Rules!");
+            var email = HttpContext.Session.GetString("email");
+            var restorantEmail = HttpContext.Session.GetString("restorant-email");
+            if (restorantEmail != null)
+            {
+                return Redirect("/restorant/index");
+            }
+            if (email != null)
+            {
+                ViewData["email"] = email;
+                return Redirect("/users/index");
+            }
+            if (email == null || restorantEmail ==null)
+            {
+                return View();
+            }
+
             return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = HttpContext.Session.GetString("Test");
-
-            return View();
-        }
-        [Authorize]
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "UrunEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UrunEkle</h2>
+
+<div class="container">
+    <form method="post" action="/restorant/UrunEkle">
+        <div class="form-group">
+            <label for="usr">Yemek Adı:</label>
+            <input type="text" class="form-control" name="yemekadi">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Fiyat :</label>
+            <input type="number" class="form-control" name="fiyat">
+        </div>
+        <button type="submit" class="btn btn-primary">Yemeği Ekle</button>
+
+    </form>
+</div>

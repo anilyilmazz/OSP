@@ -34,7 +34,7 @@ namespace SosyalMedya
             services.AddSession(options =>
             {
                 // Set a short timeout for easy testing.
-                options.IdleTimeout = TimeSpan.FromSeconds(2);
+                options.IdleTimeout = TimeSpan.FromSeconds(600);
                 options.Cookie.HttpOnly = true;
             });
 

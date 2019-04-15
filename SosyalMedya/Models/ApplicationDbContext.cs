@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SosyalMedya.Models;
 using System.Collections.Generic;
+using YemekSepeti.Models;
 
 namespace EFGetStarted.AspNetCore.NewDb.Models
 {
@@ -18,8 +19,10 @@ namespace EFGetStarted.AspNetCore.NewDb.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<Blog> Blogs { get; set; }
-        public DbSet<Post> Posts { get; set; }
+
         public DbSet<Users> Users { get; set; }
+        public  DbSet<Restorant> Restorants { get; set; }
+        public DbSet<Urunler> Urunlers { get; set; }
+        public DbSet<Siparis> Siparis { get; set; }
     }
 }

@@ -10,8 +10,9 @@ namespace SosyalMedya.Models
     public class Users
     {
         public int Id { get; set; }
-        public string UserTitle { get; set; }
-        public string UserContent { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Adress { get; set; }
     }
 
 }

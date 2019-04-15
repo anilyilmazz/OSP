@@ -1,0 +1,62 @@
+﻿@using YemekSepeti.Models;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card card-block" style="width: 25%;padding: 2% 0% 0% 10%; float:left;">
+    <img class="card-img-top" alt="100x180" src="~/images/profile-icon.png" style="height: 150px; width: 100px; margin-left:30%;">
+    <div class="card-block">
+        <center><h4 class="card-title">Hoş Geldin !!!</h4></center>
+        <p class="card-text"></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@ViewData["email"]</li>
+            <li class="list-group-item">@ViewData["adress"]</li>
+        </ul>
+        <center><a href="cikisyap" class="btn btn-danger">Çıkış Yap</a></center>
+        <br />
+    </div>
+</div>
+<table class="table " style=" width:60%; margin-right:10%;margin-top:2%;float:right">
+    <thead>
+        <tr>
+            <th>Restoran İsmi</th>
+            <th>Restoran Türü</th>
+            <th>Adres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["restoranlar"] as List<Restorant>)
+        {
+        <tr>
+            <th><a href="/users/menu?id=@item.Id">@item.Ad</a></th>
+            <th>@item.Tur</th>
+            <th>@item.Adress</th>
+        </tr>
+    }
+        </tbody>
+    </table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sipariş Tarihi</th>
+            <th>Restoran Adı</th>
+            <th>Ürün</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["siparisler"] as List<Siparis>)
+        {
+            <tr>
+                <th>@item.tarih</th>
+                <th>@item.RestorantAd</th>
+                <th>@item.UrunAdi</th>
+                <th>@item.Fiyat TL</th>
+            </tr>
+        }
+    </tbody>
+</table>
+

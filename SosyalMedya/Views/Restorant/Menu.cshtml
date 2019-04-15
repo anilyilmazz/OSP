@@ -1,0 +1,32 @@
+﻿@using YemekSepeti.Models;
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h2>Menu</h2></center>
+
+<div class="container">
+    <a class="btn btn-success" href="/restorant/urunekle" style="float:right;">Urun Ekle</a>
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewData["urunler"] as List<Urunler>)
+            {
+                <tr>
+                    <td>@item.YemekAdi</td>
+                    <td>@item.Fiyat TL</td>
+                    <td><center><a href="/restorant/urunsil?id=@item.Id" class="btn btn-danger">Sil</a></center></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

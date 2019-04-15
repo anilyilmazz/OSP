@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "";
+}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+
+        body {
+            background-image: url("/images/background.jpg");
+        }
+    </style>
+    <div style="width:30%;margin-left:5%;margin-top:15%" ;>
+        <center><p>Restorant Girişi: </p></center>
+        <form method="post" action="/restorant/girisyap">
+            <div class="form-group">
+                <label for="exampleInputEmail1">E-Mail Adresi</label>
+                <input type="email" name ="email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail Giriniz.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Parola</label>
+                <input type="password" name="password"class="form-control" id="exampleInputPassword1" placeholder="Parola">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:70%;margin-left:15%;">Restorant Giriş Yap</button>
+        </form>
+        <hr />
+        <a href="/restorant/uyeol" style="width:34%;margin-left:15%;" class="btn btn-danger">Restorant Üye Ol</a>
+        <a href="/" style="width:34%;" class="btn btn-success">Kullanıcı Girişi</a>
+    </div>
+</body>
