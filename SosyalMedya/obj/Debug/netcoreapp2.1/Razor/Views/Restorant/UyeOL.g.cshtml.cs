@@ -61,7 +61,7 @@ using SosyalMedya.Models;
 #line default
 #line hidden
             BeginContext(25, 232, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8fa4054e553493286fcd3c76d775719", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5bf0f4c4e4d5446296ba939e6c264cc8", async() => {
                 BeginContext(31, 219, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\r\n");
                 EndContext();
@@ -81,12 +81,12 @@ using SosyalMedya.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(259, 1914, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "66f956baee4e415ea24a85354bf268a9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9446c9dde17945f88d101bec3f7947f6", async() => {
                 BeginContext(265, 189, true);
                 WriteLiteral("\r\n    <style>\r\n\r\n        body {\r\n            background-image: url(\"/images/background.jpg\");\r\n        }\r\n    </style>\r\n    <div style=\"width:30%;margin-left:5%;margin-top:15%\" ;>\r\n        ");
                 EndContext();
                 BeginContext(454, 1698, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58c73e279b974fe08f6ff85338268f0f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3457f61fbdab45789733bc850c0c1937", async() => {
                     BeginContext(500, 1645, true);
                     WriteLiteral(@"
             <div class=""form-group"">

@@ -66,7 +66,7 @@ using SosyalMedya.Models;
             WriteLiteral("\r\n<h2>UrunEkle</h2>\r\n\r\n<div class=\"container\">\r\n    ");
             EndContext();
             BeginContext(145, 474, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b40633233ea476ca549d3e5827a21e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d1af5c5e64149dca38624fd1d08361f", async() => {
                 BeginContext(194, 418, true);
                 WriteLiteral(@"
         <div class=""form-group"">

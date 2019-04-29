@@ -20,6 +20,11 @@ namespace SosyalMedya.Controllers
         }
         public IActionResult Index()
         {
+            var email = HttpContext.Session.GetString("restorant-email");
+            var restorant = _ctx.Restorants.Where(a => a.Email == email).ToList();
+
+            List<Siparis> siparisler = _ctx.Siparis.Where(a => a.RestorantId == restorant[0].Id).ToList();
+            ViewData["siparisler"] = siparisler;
 
             return View();
         }
@@ -113,5 +118,9 @@ namespace SosyalMedya.Controllers
             _ctx.SaveChanges();
             return Redirect("/restorant/menu");
         }
+
+  
+
+       
     }
 }

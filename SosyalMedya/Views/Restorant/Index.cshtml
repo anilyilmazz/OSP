@@ -1,41 +1,38 @@
-﻿
+﻿@using YemekSepeti.Models;
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<br />
 <center>
-    <a href="menu">Menu İşlemleri </a>
+    <a href="menu">    <img src="http://chittagongit.com/images/icon-menu-png/icon-menu-png-10.jpg" /></a>
 </center>
 <br />
+<hr />
 <div class="container">
     <h2>Siparişler</h2>
     <p>Sipariş listesi aşağıdadır.</p>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
+                <th>Kullanıcı Adı</th>
+                <th>Kullanıcı Adres</th>
+                <th>Ürün Adı </th>
+                <th>Fiyat</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-            </tr>
-            <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-            </tr>
-            <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td><a class="btn btn-danger">Hazırlanıyot</a></td>
-            </tr>
+            @foreach (var item in ViewData["siparisler"] as List<Siparis>)
+            {
+                <tr>
+                    <td>@item.KullaniciId</td>
+                    <td>@item.Kullanici_adres</td>
+                    <td>@item.UrunAdi</td>
+                    <td>@item.Fiyat</td>
+                </tr>
+            }
+
         </tbody>
     </table>
 </div>
