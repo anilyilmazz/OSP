@@ -69,7 +69,7 @@ using YemekSepeti.Models;
             WriteLiteral("\r\n\r\n<div class=\"card card-block\" style=\"width: 25%;padding: 2% 0% 0% 10%; float:left;\">\r\n    ");
             EndContext();
             BeginContext(209, 126, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1487cacebed541f6a8af2225a4dbcb45", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0409c50fd6914d66b9058a54b97216d3", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

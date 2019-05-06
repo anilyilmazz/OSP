@@ -50,7 +50,7 @@ namespace SosyalMedya.Controllers
         public IActionResult GirisYap(string email, string password)
         {
             HttpContext.Session.Remove("restorant-email");
-            var restorant = _ctx.Restorants.Where(a => a.Email == email).Select(s => new RestorantViewModel() { Email = s.Email, Password = s.Password }).ToList();
+            var restorant = _ctx.Restorants.Where(a => a.Email == email).ToList();
             if (restorant != null )
             {
                 if (restorant[0].Password == password && restorant[0].Email == email)
@@ -81,7 +81,7 @@ namespace SosyalMedya.Controllers
                 return Redirect("/");
             }
 
-            var restorant = _ctx.Restorants.Where(a => a.Email == email).Select(s => new RestorantViewModel() { Id = s.Id }).ToList();
+            var restorant = _ctx.Restorants.Where(a => a.Email == email).ToList();
 
             List<Urunler> urunler = _ctx.Urunlers.Where(a => a.RestorantId == restorant[0].Id).ToList();
             ViewData["urunler"] = urunler;
@@ -101,7 +101,7 @@ namespace SosyalMedya.Controllers
                 return Redirect("/");
             }
 
-            var restorant = _ctx.Restorants.Where(a => a.Email == email).Select(s => new RestorantViewModel() { Id=s.Id }).ToList();
+            var restorant = _ctx.Restorants.Where(a => a.Email == email).ToList();
             var urun = new Urunler();
             urun.Fiyat = fiyat;
             urun.RestorantId = restorant[0].Id;
