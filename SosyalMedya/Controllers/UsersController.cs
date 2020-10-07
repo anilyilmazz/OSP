@@ -63,12 +63,13 @@ namespace SosyalMedya.Controllers
         public IActionResult GirisYap(string email,string password)
         {
             HttpContext.Session.Remove("email");
-            var user = _ctx.Users.Where(a => a.Email == email).ToList();
+            var user = _ctx.Users.Where(a => a.Email == email).FirstOrDefault();
             if (user != null)
             {
-                if (user[0].Password == password && user[0].Email == email)
+                if (user.Password == password && user.Email == email)
                 {
-                    HttpContext.Session.SetString("email", user[0].Email);
+                    HttpContext.Session.SetString("email", user.Email);
+                    var a = HttpContext.Session.GetString("email");
                     return Redirect("/users/index");
                 }
                 return Redirect("/");

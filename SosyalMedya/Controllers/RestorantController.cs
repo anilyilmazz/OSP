@@ -21,9 +21,9 @@ namespace SosyalMedya.Controllers
         public IActionResult Index()
         {
             var email = HttpContext.Session.GetString("restorant-email");
-            var restorant = _ctx.Restorants.Where(a => a.Email == email).ToList();
+            var restorant = _ctx.Restorants.Where(a => a.Email == email).FirstOrDefault();
 
-            List<Siparis> siparisler = _ctx.Siparis.Where(a => a.RestorantId == restorant[0].Id).ToList();
+            List<Siparis> siparisler = _ctx.Siparis.Where(a => a.RestorantId == restorant.Id).ToList();
             ViewData["siparisler"] = siparisler;
 
             return View();
