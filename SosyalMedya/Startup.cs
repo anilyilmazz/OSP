@@ -8,7 +8,7 @@ using EFGetStarted.AspNetCore.NewDb.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace SosyalMedya
+namespace YemekSepeti
 {
     public class Startup
     {
